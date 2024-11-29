@@ -1,0 +1,74 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "name": "Festa das boas",
+    "description": "Essa festa e do balaco baco",
+    "price": 200000,
+    "image": "https://i.ytimg.com/vi/2YrSNE07XDw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDA44_dtCxV-NEb93398KsinG3jKQ"
+}
+
+###
+
+GET  http://localhost:3000/api/services
+
+
+###
+
+GET  http://localhost:3000/api/services/67329d40e34008aabb732eab
+###
+
+DELETE   http://localhost:3000/api/services/67329d40e34008aabb732eab
+
+
+###
+
+PUT http://localhost:3000/api/services/6733c62b1255bc2112bdbf23
+Content-Type: application/json
+
+{
+    "name": "TESTE ATUALIZACAO",
+    "description": "TESTE ATUALIZACAO",
+    "price": 0,
+    "image": "TESTE ATUALIZACAO"
+}
+
+###
+POST http://localhost:3000/api/parties/
+Content-Type: application/json
+
+{
+    "title":"Meu eventos",
+    "author":"Murilo",
+    "description":"Festa muito loka as meio dia",
+    "budget":2000,
+    "image": "https://i.pinimg.com/736x/92/d1/6c/92d16c9e0ad34925aed36852502d7575.jpg",
+    "services": [
+        {
+            "name": "Festa das boas",
+            "description": "Essa festa e do balaco baco",
+            "price": 200,
+            "image": "https://i.ytimg.com/vi/2YrSNE07XDw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDA44_dtCxV-NEb93398KsinG3jKQ"
+        }
+    ]
+}
+###
+GET  http://localhost:3000/api/parties/
+
+
+###
+POST http://localhost:3000/api/task/
+Content-Type: application/json
+
+{
+    "title":"Primeira Task Criada kkkkk",
+    "text":"Essa e a primeira criada receba"
+}
+
+###
+GET http://localhost:3000/api/task/
+
+
+
+###
+GET http://localhost:3000/api/task/6749182aead700a5ff26cad9
