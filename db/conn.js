@@ -1,10 +1,11 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
 async function main() {
-    mongoose.set("strictQuery",true);
+    mongoose.set("strictQuery", true);
 
     try {
-        await mongoose.connect(`mongodb+srv://murilo:CODDfodTpAQkYQ19@cluster0.xcn4n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
+        await mongoose.connect(process.env.MONGO_URI);
 
         console.log("Conectado ao banco!")
     } catch (error) {
